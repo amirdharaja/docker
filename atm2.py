@@ -1,6 +1,8 @@
 from __future__ import unicode_literals, print_function
 from prompt_toolkit import print_formatted_text, HTML
 from prompt_toolkit.styles import Style
+from flask import Flask
+app = Flask(__name__)
 from abc import ABC, abstractmethod 
 import random
 style = Style.from_dict({
