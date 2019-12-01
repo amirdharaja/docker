@@ -9,6 +9,8 @@ style = Style.from_dict({
     'aaa': '#ff0066',
     'bbb': '#44ff00 italic',
 })
+
+@app.route('/')
 class MainAbstractClass(ABC):
 
     @abstractmethod
@@ -184,4 +186,7 @@ class ATM(MainAbstractClass):
 card = ATM()
 print_formatted_text(HTML('\n\t\t<aaa>Welcome</aaa> <bbb>User</bbb>!\n'), style=style)
 card._login()
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=80)
  
